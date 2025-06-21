@@ -3,12 +3,12 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import Image from "next/image";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
-import { Separator } from "@/components/ui/separator";
 
 const profileFormSchema = z.object({
     name: z.string().min(2, "Name must be at least 2 characters."),
@@ -57,6 +57,17 @@ export default function ProfilePage() {
             <h1 className="text-3xl font-bold tracking-tight">Profile & Settings</h1>
             <p className="text-muted-foreground">Manage your account information and preferences.</p>
         </div>
+      
+      <Card className="overflow-hidden">
+        <Image
+            src="https://placehold.co/800x250.png"
+            width={800}
+            height={250}
+            alt="Abstract financial background"
+            data-ai-hint="money finance"
+            className="w-full object-cover"
+        />
+      </Card>
 
       <Card>
         <CardHeader>
