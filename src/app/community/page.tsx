@@ -6,6 +6,7 @@ import { PostCard } from '@/components/community/post-card';
 import { NewPostDialog } from '@/components/community/new-post-dialog';
 import { Button } from '@/components/ui/button';
 import { PlusCircle } from 'lucide-react';
+import Image from 'next/image';
 
 const initialPosts: ForumPost[] = [
   { id: '1', author: { name: 'Jane Doe', avatarUrl: 'https://placehold.co/40x40.png', avatarHint: 'woman face' }, title: 'My strategy for paying off credit card debt', content: 'I started by tackling the card with the highest interest rate first, a method known as the avalanche method. It saved me a lot in interest payments over time. I also called my credit card company to negotiate a lower interest rate, which they surprisingly agreed to! What are your tips?', timestamp: '2 hours ago', upvotes: 42, replies: 12 },
@@ -30,17 +31,28 @@ export default function CommunityPage() {
 
   return (
     <div className="flex flex-col gap-8">
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight">Community Forum</h1>
-          <p className="text-muted-foreground">Share and discover financial strategies.</p>
+      <div className="relative rounded-lg overflow-hidden shadow-lg">
+        <Image
+            src="https://placehold.co/1200x250.png"
+            width={1200}
+            height={250}
+            alt="A vibrant community discussion"
+            data-ai-hint="community discussion"
+            className="w-full h-40 object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent" />
+        <div className="absolute inset-0 flex items-center justify-between p-6 md:p-8">
+            <div className="max-w-md">
+                <h1 className="text-3xl font-bold tracking-tight text-white">Community Forum</h1>
+                <p className="text-white/90 mt-1">Share and discover financial strategies with others.</p>
+            </div>
+            <NewPostDialog onNewPost={handleNewPost}>
+                <Button>
+                    <PlusCircle className="mr-2 h-4 w-4" />
+                    Create Post
+                </Button>
+            </NewPostDialog>
         </div>
-        <NewPostDialog onNewPost={handleNewPost}>
-            <Button>
-                <PlusCircle className="mr-2 h-4 w-4" />
-                Create Post
-            </Button>
-        </NewPostDialog>
       </div>
       <div className="space-y-4">
         {posts.map(post => (

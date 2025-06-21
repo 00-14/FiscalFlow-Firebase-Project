@@ -6,6 +6,7 @@ import { AddGoalDialog } from '@/components/goals/add-goal-dialog';
 import type { Goal } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { PlusCircle } from 'lucide-react';
+import Image from 'next/image';
 
 const initialGoals: Goal[] = [
   { id: '1', title: 'Emergency Fund', currentAmount: 7500, targetAmount: 10000, deadline: '2024-12-31' },
@@ -52,7 +53,10 @@ export default function GoalsPage() {
           ))}
         </div>
       ) : (
-        <div className="flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-muted-foreground/30 bg-muted/20 p-12 text-center">
+        <div className="flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-muted-foreground/30 bg-card p-12 text-center">
+            <div className="relative h-40 w-40 mb-6">
+                <Image src="https://placehold.co/400x400.png" fill alt="A target with an arrow" data-ai-hint="goal target" className="object-contain" />
+            </div>
             <h3 className="text-xl font-medium">No goals yet!</h3>
             <p className="text-sm text-muted-foreground mt-2 mb-4">Start by adding a new financial goal to track.</p>
             <AddGoalDialog onAddGoal={handleAddGoal}>
