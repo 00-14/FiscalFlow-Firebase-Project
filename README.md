@@ -19,3 +19,12 @@ To get started, take a look at src/app/page.tsx.
       src="https://cdn.firebasestudio.dev/btn/open_blue_32.svg">
   </picture>
 </a>
+
+
+AI-Based Personal Finance Advisor
+Description: An app that provides personalized financial advice based on user data.
+Features:
+User profiles for secure financial data management.
+AI-driven insights and recommendations for budgeting and saving.
+Goal-setting tools for financial objectives.
+Community forums for sharing experiences and strategies.
