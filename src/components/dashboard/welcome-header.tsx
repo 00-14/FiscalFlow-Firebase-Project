@@ -8,7 +8,7 @@ export function WelcomeHeader() {
         alt="Financial planning illustration"
         fill
         className="object-cover"
-        data-ai-hint="finance planning"
+        data-ai-hint="money saving"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
       <div className="absolute bottom-0 left-0 p-6 md:p-8">

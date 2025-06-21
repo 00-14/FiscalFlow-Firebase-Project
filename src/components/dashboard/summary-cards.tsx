@@ -4,7 +4,7 @@ import { DollarSign, CreditCard, PiggyBank, TrendingDown } from "lucide-react";
 const summaryData = [
     { title: "Monthly Income", value: "$5,250", icon: DollarSign, change: "+5% from last month" },
     { title: "Monthly Expenses", value: "$2,890", icon: CreditCard, change: "+2% from last month" },
-    { title: "Total Savings", value: "$15,730", icon: PiggyBank, change: "+$500 this month" },
+    { title: "Total Savings 💰", value: "$15,730", icon: PiggyBank, change: "+$500 this month" },
     { title: "Outstanding Debt", value: "$3,420", icon: TrendingDown, change: "-$200 this month" },
 ]
 
