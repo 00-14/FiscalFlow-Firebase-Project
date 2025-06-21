@@ -5,10 +5,10 @@ export function WelcomeHeader() {
     <div className="relative w-full h-56 rounded-lg overflow-hidden shadow-lg">
       <Image
         src="https://placehold.co/1200x400.png"
-        alt="Financial planning illustration"
+        alt="A piggy bank symbolizing saving money"
         fill
         className="object-cover"
-        data-ai-hint="money saving"
+        data-ai-hint="piggy bank"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
       <div className="absolute bottom-0 left-0 p-6 md:p-8">
